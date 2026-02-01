@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full bg-[url('/mobile-bg.PNG')] bg-cover bg-center bg-no-repeat md:bg-none md:bg-[#FFE4C4] flex flex-col items-center justify-center p-4 relative overflow-hidden">
+    <main className="min-h-screen w-full bg-[url('/mobile-bg.png')] bg-cover bg-center bg-no-repeat md:bg-none md:bg-[#FFE4C4] flex flex-col items-center justify-center p-4 relative overflow-hidden">
         {/* Background Decorative Elements - Subtle Waves/Sun (Hidden on mobile to show BG image clear) */}
         <div className="hidden md:block absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
             <div className="absolute top-[-10%] left-[-10%] w-[50vh] h-[50vh] rounded-full bg-orange-300 blur-3xl"/>

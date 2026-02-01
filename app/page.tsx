@@ -1,7 +1,7 @@
 'use client';
 
 import { LinkButton } from '@/components/LinkButton';
-import { motion } from 'framer-motion';
+
 
 export default function Home() {
   return (
@@ -18,10 +18,7 @@ export default function Home() {
         <div className="z-10 w-full max-w-lg flex flex-col items-center gap-0 md:gap-8">
             
             {/* Header / Logo Section */}
-            <motion.div 
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+            <div 
                 className="flex flex-col items-center text-center space-y-4 relative z-0"
             >
 
@@ -40,13 +37,10 @@ export default function Home() {
                         Ride the waves with the warmth of the sun.
                     </p>
                 </div>
-            </motion.div>
+            </div>
 
             {/* Links Section */}
-            <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.8 }}
+            <div 
                 className="w-full flex flex-col items-center gap-4 mt-10 md:mt-0 relative z-10"
             >
                 <LinkButton 
@@ -69,7 +63,7 @@ export default function Home() {
                     imageSrc="/ask_it_here.png"
                     className="w-[70%] -rotate-0 -mt-4 -translate-x-10"
                 />
-            </motion.div>
+            </div>
         
         </div>
 

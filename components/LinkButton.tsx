@@ -19,23 +19,26 @@ export function LinkButton({ href, label, icon, className, imageSrc }: LinkButto
   const router = useRouter();
   const [splash, setSplash] = useState<{ x: number; y: number } | null>(null);
 
-  const handleClick = (e: React.MouseEvent) => {
-    e.preventDefault(); // Prevent immediate navigation
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault(); 
     
-    // Capture click coordinates
-    const x = e.clientX;
-    const y = e.clientY;
-    setSplash({ x, y });
+    // Capture button center instead of click coordinates
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = rect.left + rect.width / 2; // Center X
+    const y = rect.top + rect.height / 2; // Center Y
+    // Pass half width/height to scatter around the button
+    const width = rect.width;
+    const height = rect.height;
 
-    // Delay navigation to let animation play
+    setSplash({ x, y, width, height });
+
     setTimeout(() => {
-        // Handle external or internal links
         if (href.startsWith('http') || href.startsWith('mailto:')) {
             window.location.href = href;
         } else {
             router.push(href);
         }
-    }, 700); // 700ms delay matches animation roughly
+    }, 700); 
   };
 
   return (
@@ -44,6 +47,8 @@ export function LinkButton({ href, label, icon, className, imageSrc }: LinkButto
         <SplashParticles
           x={splash.x}
           y={splash.y}
+          width={splash.width}
+          height={splash.height}
           onComplete={() => setSplash(null)}
         />
       )}

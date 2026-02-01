@@ -17,7 +17,7 @@ interface LinkButtonProps {
 
 export function LinkButton({ href, label, icon, className, imageSrc }: LinkButtonProps) {
   const router = useRouter();
-  const [splash, setSplash] = useState<{ x: number; y: number; width: number; height: number } | null>(null);
+  const [splash, setSplash] = useState<{ x: number; y: number } | null>(null);
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault(); 

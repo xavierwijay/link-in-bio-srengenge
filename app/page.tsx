@@ -44,7 +44,7 @@ export default function Home() {
                 className="w-full flex flex-col items-center gap-4 mt-10 md:mt-0 relative z-10"
             >
                 <LinkButton 
-                    href="https://wa.me/6281234567890" 
+                    href="https://srengengesurftrip.netlify.app/" 
                     label="Pesan Disini"
                     imageSrc="/pesan_disini.png"
                     className="w-[70%] -rotate-0 mt-25 -translate-x-10"
@@ -58,11 +58,24 @@ export default function Home() {
                 />
                 
                 <LinkButton 
-                    href="mailto:info@srengengesurfing.com" 
+                    href="https://api.whatsapp.com/send/?phone=6285183001691&text=Hi+kak+saya+mau+nanya+soal+srengenge+dong!%21&type=phone_number&app_absent=0" 
                     label="Mau tanya sesuatu? Ask it here"
                     imageSrc="/ask_it_here.png"
                     className="w-[70%] -rotate-0 -mt-4 -translate-x-10"
                 />
+            </div>
+
+            {/* Social Media Icons */}
+            <div className="absolute bottom-10 left-8 flex items-center gap-4 z-20">
+                <a href="https://www.instagram.com/srengenge__trip/" target="_blank" rel="noopener noreferrer">
+                    <img src="/instagram.png" alt="Instagram" className="w-10 h-10 object-contain hover:scale-110 transition-transform drop-shadow-md" />
+                </a>
+                <a href="https://www.tiktok.com/@srengengesurftrip" target="_blank" rel="noopener noreferrer">
+                    <img src="/tiktok.png" alt="TikTok" className="w-10 h-10 object-contain hover:scale-110 transition-transform drop-shadow-md" />
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=6285183001691&text=Hi+kak+saya+mau+nanya+soal+srengenge+dong!%21&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                    <img src="/whatsapp.png" alt="WhatsApp" className="w-10 h-10 object-contain hover:scale-110 transition-transform drop-shadow-md" />
+                </a>
             </div>
         
         </div>

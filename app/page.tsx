@@ -23,6 +23,13 @@ export default function Home() {
             >
 
 
+                {/* Mobile Heading Image */}
+                <img 
+                    src="/heading-mobile.png" 
+                    alt="Srengenge Surfing" 
+                    className="block md:hidden w-full max-w-sm object-contain drop-shadow-lg -mb-25 -mt-25"
+                />
+
                 {/* Desktop Logo & Text (Hidden on Mobile) */}
                 <div className="hidden md:flex flex-col items-center space-y-4">
                     <div className="w-32 h-32 rounded-full bg-white shadow-2xl flex items-center justify-center border-4 border-orange-500 overflow-hidden">

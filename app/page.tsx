@@ -5,7 +5,15 @@ import { LinkButton } from '@/components/LinkButton';
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full bg-[url('/mobile-bg.png')] bg-cover bg-center bg-no-repeat md:bg-none md:bg-[#FFE4C4] flex flex-col items-center justify-center p-4 relative overflow-hidden">
+    <main className="min-h-screen w-full flex flex-col items-center justify-center p-4 relative overflow-hidden md:bg-[#FFE4C4]">
+        {/* Mobile Background Image (Fixed) */}
+        <div className="fixed inset-0 z-[-1] md:hidden">
+            <img 
+                src="/mobile-bg.png" 
+                alt="Background" 
+                className="w-full h-full object-cover"
+            />
+        </div>
         {/* Background Decorative Elements - Subtle Waves/Sun (Hidden on mobile to show BG image clear) */}
         <div className="hidden md:block absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
             <div className="absolute top-[-10%] left-[-10%] w-[50vh] h-[50vh] rounded-full bg-orange-300 blur-3xl"/>

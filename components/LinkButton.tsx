@@ -12,9 +12,10 @@ interface LinkButtonProps {
   label: string;
   icon?: React.ReactNode;
   className?: string;
+  imageSrc?: string;
 }
 
-export function LinkButton({ href, label, icon, className }: LinkButtonProps) {
+export function LinkButton({ href, label, icon, className, imageSrc }: LinkButtonProps) {
   const router = useRouter();
   const [splash, setSplash] = useState<{ x: number; y: number } | null>(null);
 
@@ -51,14 +52,19 @@ export function LinkButton({ href, label, icon, className }: LinkButtonProps) {
         whileTap={{ scale: 0.95 }}
         onClick={handleClick}
         className={twMerge(
-          "relative w-full max-w-md py-5 px-8 rounded-full font-bold text-lg shadow-xl transition-all border-2 border-white/20 select-none",
-          "bg-orange-500 text-white hover:bg-orange-600 hover:shadow-2xl",
-          "flex items-center justify-center gap-3",
+          "relative w-full max-w-sm transition-all select-none flex items-center justify-center",
+          !imageSrc && "py-5 px-8 rounded-full font-bold text-lg shadow-xl border-2 border-white/20 bg-orange-500 text-white hover:bg-orange-600 hover:shadow-2xl gap-3",
           className
         )}
       >
-        {icon}
-        {label}
+        {imageSrc ? (
+            <img src={imageSrc} alt={label} className="w-full h-auto object-contain drop-shadow-md" />
+        ) : (
+            <>
+                {icon}
+                {label}
+            </>
+        )}
       </motion.button>
     </>
   );

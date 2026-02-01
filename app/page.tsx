@@ -27,7 +27,7 @@ export default function Home() {
                 <img 
                     src="/heading-mobile.png" 
                     alt="Srengenge Surfing" 
-                    className="block md:hidden w-[110%] max-w-none -ml-[0] object-contain drop-shadow-lg -mb-25 -mt-30"
+                    className="block md:hidden w-[110%] max-w-none -ml-[0] object-contain drop-shadow-lg -mb-25 -mt-35"
                 />
 
                 {/* Desktop Logo & Text (Hidden on Mobile) */}

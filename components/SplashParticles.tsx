@@ -52,15 +52,19 @@ export const SplashParticles = ({ x, y, onComplete }: SplashParticlesProps) => {
               position: 'fixed',
               left: 0,
               top: 0,
-              width: size,
-              height: size,
-              borderRadius: '50%',
-              backgroundColor: '#0EA5E9', // Sky Blue 500
-              boxShadow: '0 0 4px rgba(14, 165, 233, 0.5)',
+              width: size * 4, // Make images larger than the dots were
+              height: size * 4,
               pointerEvents: 'none',
               zIndex: 9999,
             }}
-          />
+          >
+            <img 
+              src="/splash.png" 
+              alt="splash" 
+              className="w-full h-full object-contain opacity-80"
+              style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.1))" }}
+            />
+          </motion.div>
         );
       })}
     </>

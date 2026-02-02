@@ -5,9 +5,12 @@ import { LinkButton } from '@/components/LinkButton';
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full bg-[url('/mobile-bg.png')] bg-cover bg-center bg-no-repeat md:bg-none md:bg-[#FFE4C4] flex flex-col items-center justify-center p-4 relative overflow-hidden">
-        {/* Background Decorative Elements - Subtle Waves/Sun (Hidden on mobile to show BG image clear) */}
-        <div className="hidden md:block absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
+    <main className="min-h-screen w-full bg-[url('/mobile-bg.png')] bg-cover bg-center bg-no-repeat md:bg-[url('/bg-desktop.png')] md:bg-cover md:bg-center flex flex-col items-center justify-center p-4 relative overflow-hidden">
+        {/* Only show decorative blobs on mobile if needed, or remove completely if desktop bg covers it. 
+            The previous blobs were hidden md:block, but now we have a full desktop image. 
+            We can probably remove the blobs or keep them hidden for now. 
+        */}
+        <div className="hidden absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
             <div className="absolute top-[-10%] left-[-10%] w-[50vh] h-[50vh] rounded-full bg-orange-300 blur-3xl"/>
             <div className="absolute bottom-[-10%] right-[-10%] w-[60vh] h-[60vh] rounded-full bg-yellow-300 blur-3xl"/>
         </div>
@@ -30,19 +33,13 @@ export default function Home() {
                     className="block md:hidden w-[110%] max-w-none -ml-[0] object-contain drop-shadow-lg -mb-25 -mt-35"
                 />
 
-                {/* Desktop Logo & Text (Hidden on Mobile) */}
-                <div className="hidden md:flex flex-col items-center space-y-4">
-                    <div className="w-32 h-32 rounded-full bg-white shadow-2xl flex items-center justify-center border-4 border-orange-500 overflow-hidden">
-                         {/* You should replace this with <Image /> if you have the asset */}
-                         <span className="text-4xl font-black text-orange-500">S</span>
-                    </div>
-                    
-                    <h1 className="text-3xl md:text-4xl font-bold text-stone-800 tracking-tight">
-                        Srengenge Surfing
-                    </h1>
-                    <p className="text-stone-600 font-medium max-w-xs">
-                        Ride the waves with the warmth of the sun.
-                    </p>
+                {/* Desktop Logo (Hidden on Mobile) */}
+                <div className="hidden md:flex flex-col items-center space-y-4 mt-2 mb-10">
+                    <img 
+                        src="/logoo.png" 
+                        alt="Srengenge Surfing" 
+                        className="w-48 h-48 object-contain drop-shadow-2xl"
+                    />
                 </div>
             </div>
 
@@ -54,26 +51,26 @@ export default function Home() {
                     href="https://srengengesurftrip.netlify.app/" 
                     label="Pesan Disini"
                     imageSrc="/pesan_disini.png"
-                    className="w-[70%] -rotate-0 mt-25 -translate-x-10"
+                    className="w-[70%] -rotate-0 mt-25 -translate-x-10 md:w-80 md:-mt-10 md:-translate-x-20 md:rotate-0"
                 />
                 
                 <LinkButton 
                     href="/shop" 
                     label="Get Our Merch"
                     imageSrc="/get_our_merch.png"
-                    className="w-[70%] rotate-0 -mt-4 translate-x-10"
+                    className="w-[70%] rotate-0 -mt-4 translate-x-10 md:w-80 md:-mt-10 md:translate-x-20 md:rotate-0"
                 />
                 
                 <LinkButton 
                     href="https://api.whatsapp.com/send/?phone=6285183001691&text=Hi+kak+saya+mau+nanya+soal+srengenge+dong!%21&type=phone_number&app_absent=0" 
                     label="Mau tanya sesuatu? Ask it here"
                     imageSrc="/ask_it_here.png"
-                    className="w-[70%] -rotate-0 -mt-4 -translate-x-10"
+                    className="w-[70%] -rotate-0 -mt-4 -translate-x-10 md:w-80 md:-mt-10 md:-translate-x-20 md:rotate-0"
                 />
             </div>
 
             {/* Social Media Icons */}
-            <div className="absolute bottom-10 left-8 flex items-center gap-4 z-20">
+            <div className="absolute bottom-10 left-8 md:left-auto md:right-8 flex items-center gap-4 z-20">
                 <a href="https://www.instagram.com/srengenge__trip/" target="_blank" rel="noopener noreferrer">
                     <img src="/instagram.png" alt="Instagram" className="w-10 h-10 object-contain hover:scale-110 transition-transform drop-shadow-md" />
                 </a>

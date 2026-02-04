@@ -5,7 +5,7 @@ import { LinkButton } from '@/components/LinkButton';
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full bg-[url('/mobile-bg.png')] bg-cover bg-center bg-no-repeat md:bg-[url('/bg-desktop.png')] md:bg-cover md:bg-center flex flex-col items-center justify-center p-4 relative overflow-hidden">
+    <main className="min-h-screen w-full bg-[url('/mobile-bg.PNG')] bg-cover bg-center bg-no-repeat md:bg-[url('/bg-desktop.jpeg')] md:bg-cover md:bg-bottom flex flex-col items-center justify-center p-4 relative overflow-hidden">
         {/* Only show decorative blobs on mobile if needed, or remove completely if desktop bg covers it. 
             The previous blobs were hidden md:block, but now we have a full desktop image. 
             We can probably remove the blobs or keep them hidden for now. 
@@ -48,14 +48,14 @@ export default function Home() {
                 className="w-full flex flex-col items-center gap-4 mt-10 md:mt-0 relative z-10"
             >
                 <LinkButton 
-                    href="https://srengengesurftrip.netlify.app/" 
+                    href="https://srengengetrip.online" 
                     label="Pesan Disini"
                     imageSrc="/pesan_disini.png"
-                    className="w-[70%] -rotate-0 mt-25 -translate-x-10 md:w-80 md:-mt-10 md:-translate-x-20 md:rotate-0"
+                    className="w-[70%] -rotate-0 mt-25 -translate-x-10 md:w-80 md:-mt-19 md:-translate-x-20 md:rotate-0"
                 />
                 
                 <LinkButton 
-                    href="/shop" 
+                    href="https://s.shopee.co.id/7pnT4TNAZH" 
                     label="Get Our Merch"
                     imageSrc="/get_our_merch.png"
                     className="w-[70%] rotate-0 -mt-4 translate-x-10 md:w-80 md:-mt-10 md:translate-x-20 md:rotate-0"
@@ -65,7 +65,7 @@ export default function Home() {
                     href="https://api.whatsapp.com/send/?phone=6285183001691&text=Hi+kak+saya+mau+nanya+soal+srengenge+dong!%21&type=phone_number&app_absent=0" 
                     label="Mau tanya sesuatu? Ask it here"
                     imageSrc="/ask_it_here.png"
-                    className="w-[70%] -rotate-0 -mt-4 -translate-x-10 md:w-80 md:-mt-10 md:-translate-x-20 md:rotate-0"
+                    className="w-[70%] -rotate-0 -mt-4 -translate-x-10 md:w-80 md:-mt-4 md:translate-x-2 md:rotate-0"
                 />
             </div>
 

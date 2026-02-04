@@ -5,7 +5,7 @@ import { LinkButton } from '@/components/LinkButton';
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full bg-[url('/mobile-bg.PNG')] bg-cover bg-center bg-no-repeat md:bg-[url('/bg-desktop.jpeg')] md:bg-cover md:bg-bottom flex flex-col items-center justify-center p-4 relative overflow-hidden">
+    <main className="min-h-screen w-full bg-[url('/mobile-bg.png')] bg-cover bg-center bg-no-repeat md:bg-[url('/bg-desktop.jpeg')] md:bg-cover md:bg-bottom flex flex-col items-center justify-center p-4 relative overflow-hidden">
         {/* Only show decorative blobs on mobile if needed, or remove completely if desktop bg covers it. 
             The previous blobs were hidden md:block, but now we have a full desktop image. 
             We can probably remove the blobs or keep them hidden for now. 
@@ -34,7 +34,7 @@ export default function Home() {
                 />
 
                 {/* Desktop Logo (Hidden on Mobile) */}
-                <div className="hidden md:flex flex-col items-center space-y-4 mt-2 mb-10">
+                <div className="hidden md:flex flex-col items-center space-y-4 -mt-40 mb-10">
                     <img 
                         src="/logoo.png" 
                         alt="Srengenge Surfing" 

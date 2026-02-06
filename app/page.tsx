@@ -73,7 +73,7 @@ export default function Home() {
             <img 
                 src="/tagline.png" 
                 alt="Tagline" 
-                className="absolute bottom-28 left-6 w-48 md:hidden pointer-events-none z-0"
+                className="absolute bottom-18 left-5 w-48 md:hidden pointer-events-none z-0"
             />
             <img 
                 src="/pohon-kelapa.png" 

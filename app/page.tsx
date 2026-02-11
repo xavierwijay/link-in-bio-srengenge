@@ -5,7 +5,7 @@ import { LinkButton } from '@/components/LinkButton';
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full bg-[url('/mobile-bg.png')] bg-cover bg-center bg-no-repeat md:bg-[url('/bg-desktop.jpeg')] md:bg-cover md:bg-bottom flex flex-col items-center justify-center p-4 relative overflow-hidden">
+    <main className="min-h-screen w-full bg-[url('/mobile-bg.png')] bg-[length:100%_100%] bg-center bg-no-repeat md:bg-[url('/bg-desktop.jpeg')] md:bg-cover md:bg-bottom flex flex-col items-center justify-center p-4 relative overflow-hidden">
         {/* Only show decorative blobs on mobile if needed, or remove completely if desktop bg covers it. 
             The previous blobs were hidden md:block, but now we have a full desktop image. 
             We can probably remove the blobs or keep them hidden for now. 
@@ -73,7 +73,7 @@ export default function Home() {
             <img 
                 src="/tagline.png" 
                 alt="Tagline" 
-                className="absolute bottom-18 left-5 w-48 md:hidden pointer-events-none z-0"
+                className="absolute bottom-4 left-5 w-40 md:hidden pointer-events-none z-0"
             />
             <img 
                 src="/pohon-kelapa.png" 
@@ -82,7 +82,7 @@ export default function Home() {
             />
 
             {/* Social Media Icons */}
-            <div className="absolute bottom-10 left-8 md:left-auto md:right-8 flex items-center gap-4 z-20">
+            <div className="absolute bottom-5 left-[170px] md:left-auto md:right-8 flex items-center gap-4 z-20">
                 <a href="https://www.instagram.com/srengenge__trip/" target="_blank" rel="noopener noreferrer">
                     <img src="/instagram.png" alt="Instagram" className="w-10 h-10 object-contain hover:scale-110 transition-transform drop-shadow-md" />
                 </a>

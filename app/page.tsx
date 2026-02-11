@@ -63,16 +63,11 @@ export default function Home() {
         <img
           src="/tagline.png"
           alt="Tagline"
-          className="absolute bottom-4 left-5 w-40 md:hidden pointer-events-none z-0"
-        />
-        <img
-          src="/pohon-kelapa.png"
-          alt="Coconut Tree"
-          className="absolute -bottom-8 -right-8 w-64 md:hidden pointer-events-none z-0"
+          className="absolute bottom-4 left-5 w-50 md:hidden pointer-events-none z-0"
         />
 
         {/* Social Media Icons */}
-        <div className="absolute bottom-5 left-[170px] md:left-auto md:right-8 flex items-center gap-4 z-20">
+        <div className="absolute bottom-7 right-[20px] md:left-auto md:right-8 flex items-center gap-4 z-20">
           <a
             href="https://www.instagram.com/srengenge__trip/"
             target="_blank"

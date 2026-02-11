@@ -26,7 +26,7 @@ export default function Home() {
           />
 
           {/* Desktop Logo (Hidden on Mobile) */}
-          <div className="hidden md:flex flex-col items-center space-y-4 -mt-40 mb-10">
+          <div className="hidden md:flex flex-col items-center space-y-4 md:mb-8">
             <img
               src="/logoo.png"
               alt="Srengenge Surfing"
@@ -36,26 +36,26 @@ export default function Home() {
         </div>
 
         {/* Links Section */}
-        <div className="w-full flex flex-col items-center gap-4 mt-10 md:mt-0 relative z-10">
+        <div className="w-full flex flex-col items-center gap-4 mt-10 md:-mt-7 relative z-10">
           <LinkButton
             href="https://srengengetrip.online"
             label="Pesan Disini"
             imageSrc="/pesan_disini.png"
-            className="w-[70%] -rotate-0 mt-25 -translate-x-10 md:w-80 md:-mt-19 md:-translate-x-20 md:rotate-0"
+            className="w-[70%] -rotate-0 mt-25 -translate-x-10 md:w-80 md:-mt-6 md:-translate-x-20 md:rotate-0"
           />
 
           <LinkButton
             href="https://s.shopee.co.id/7pnT4TNAZH"
             label="Get Our Merch"
             imageSrc="/get_our_merch.png"
-            className="w-[70%] rotate-0 -mt-4 translate-x-10 md:w-80 md:-mt-10 md:translate-x-20 md:rotate-0"
+            className="w-[70%] rotate-0 -mt-4 translate-x-10 md:w-80 md:-mt-6 md:translate-x-20 md:rotate-0"
           />
 
           <LinkButton
             href="https://api.whatsapp.com/send/?phone=6285183001691&text=Hi+kak+saya+mau+nanya+soal+srengenge+dong!%21&type=phone_number&app_absent=0"
             label="Mau tanya sesuatu? Ask it here"
             imageSrc="/ask_it_here.png"
-            className="w-[70%] -rotate-0 -mt-4 -translate-x-10 md:w-80 md:-mt-4 md:translate-x-2 md:rotate-0"
+            className="w-[70%] -rotate-0 -mt-4 -translate-x-10 md:w-80 md:-mt-2 md:translate-x-2 md:rotate-0"
           />
         </div>
 

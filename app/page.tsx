@@ -59,7 +59,7 @@ export default function Home() {
           />
         </div>
 
-        {/* Mobile Decorative Aaaaaaaaassets */}
+        {/* Mobile Decorative Aaaassets */}
         <img
           src="/tagline.png"
           alt="Tagline"
